@@ -7,11 +7,19 @@ The geometry is implemented in
 compact/ECalBarrel_DualCrystal.xml
 ```
 
-Run this example using the script "A_RUN". This example works when using material = "PbWO4". This does not give scintillation photons, but you will see Cherenkov photons.
+Check the ECAL geometry using this top-level file that includes "ECalBarrel_DualCrystal.xml":
+
+```bash
+geoDisplay  SimpleECAL.xml
+```
+
+Run this example using the script "A_RUN". It will make the ROOt file. This example works when using material = "PbWO4". This does not give scintillation photons, but you will see Cherenkov photons.
 
 If you will replace PbWO4 with E_PbWO4, both Cherenkov and scinitillation photons will be printed, but the program will be running forever  (kill it from another window!). 
  
 
+
+##  Installation 
 
 ```bash
 git clone https://github.com/AIDASoft/DD4hep.git
