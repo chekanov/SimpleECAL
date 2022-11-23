@@ -1,27 +1,32 @@
 # SimpleECAL 
 
-This is an example of CLIC-like ECAL which replaces the original ECAL with the crystals.
+This is an example of CLIC-like barrel ECAL with crystals (PbWO4). It uses the original CLIC geometry files and variables.
+The only difference is that it uses 1 cm cell sizes (to speed up calculations).
+
 The geometry is implemented in 
 
 ```bash
 compact/ECalBarrel_DualCrystal.xml
 ```
 
-Check the ECAL geometry using this top-level file that includes "ECalBarrel_DualCrystal.xml":
+Check the ECAL geometry using this top-level file SimpleECAL.xml that includes "ECalBarrel_DualCrystal.xml":
 
 ```bash
-geoDisplay  SimpleECAL.xml
+geoDisplay SimpleECAL.xml
 ```
 
-Run this example using the script "A_RUN". It will make the ROOt file. This example works when using material = "PbWO4". This does not give scintillation photons, but you will see Cherenkov photons.
+Run this example using the script "A_RUN". It  makes the ROOT file (usieng Sarah's example). This program works when using material "PbWO4". This does not give scintillation photons, but you will see Cherenkov photons.
 
-If you will replace PbWO4 with E_PbWO4, both Cherenkov and scinitillation photons will be printed, but the program will be running forever  (kill it from another window!). 
+If you will replace PbWO4 with E_PbWO4 inside "ECalBarrel_DualCrystal.xml", both Cherenkov and scintillation photons will be printed, 
+but the program will be running forever (kill it from another window!). 
  
 
+This program is based on the SingleDualCrystal and the CLIC geometry files.
 
 ##  Installation 
 
 ```bash
+source /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc11-opt/setup.sh
 git clone https://github.com/AIDASoft/DD4hep.git
 cd DD4hep/examples
 git clone git@github.com:chekanov/SimpleECAL.git 

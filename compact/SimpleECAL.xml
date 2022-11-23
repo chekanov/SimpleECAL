@@ -183,7 +183,7 @@
         <constant name="tracker_region_zmax"        value="OuterTracker_half_length"/>
         <constant name="tracker_region_rmax"        value="OuterTracker_outer_radius"/>
 
-        <!-- Click default
+        <!-- This is original CLIC cell sizes.
         <constant name="ECal_cell_size"             value="5.1*mm"/>
         -->
         <constant name="ECal_cell_size"             value="10.0*mm"/>
